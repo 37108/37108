@@ -61,7 +61,7 @@ hr {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 1.5px solid #000;
+  border: 1.5px solid var(--black);
 }
 
 .user-info__contents {
