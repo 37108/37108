@@ -1,30 +1,29 @@
 html {
   color: #9c9c9c;
-  font: Helvetica Neue;
+}
+
+:root {
+  --white: #C0C0C0;
+  --gray: #9c9c9c;
+  --black: #2b2b2b;
+  --blue: #698AAB;
 }
 
 html,
 body {
-  background: #2b2b2b;
-  font-family: "Helvetica Neue",
-    Arial,
-    "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans",
-    Meiryo,
-    sans-serif;
+  background: var(--black);
+  font-family: "Helvetica Neue";
 }
 
 a {
-  color: #8b968d;
+  color: var(--blue);
   display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 10px;
   position: relative;
   text-decoration: none;
 }
 
 a::after {
-  background: #9079ad;
+  background: var(--blue);
   bottom: -4px;
   content: '';
   height: 1px;
@@ -54,43 +53,98 @@ hr {
   width: 100%;
 }
 
-.wrapper {
-  margin-left: 24px;
-  min-height: 80px;
-}
-.title {
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.subtitle {
-  color: #707070;
-  margin-top: 0px;
-}
-
-.section-wrapper {
-  min-height: 200px;
-  margin-left: 24px;
-}
-
-.section-title {
-  font-size: 1.725rem;
-  margin-bottom: 0px;
-}
-
-.section-body {
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.header {
-  align-items: center;
-  color: #8b968d;
+#container {
   display: flex;
-  margin-left: 24px;
+  margin: 50px 100px;
 }
 
-.header > p {
+.user-info {
+  margin-right: 50px;
+}
+
+.user-info__inner {
+  margin-right: 10px;
+}
+
+.user-info__image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 1.5px solid #000;
+}
+
+.user-info__contents {
+  margin: 20px 0;
+}
+
+.user-info__title {
+  color: var(--gray);
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.user-info__text {
+  color: var(--gray);
+  margin: 0;
+  font-size: .9rem;
+}
+
+.user-info__links {
+  margin-top: 1px;
+}
+
+.user-info__link {
+  font-size: .9rem;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.portfolio__title {
+  color: var(--gray);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio__list {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.portfolio__text {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.portfolio__text:last-child {
   margin-bottom: 0;
+}
+
+.works {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    flex-direction: column;
+    margin: 20px 20px;
+  }
+  .user-info {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .user-info__image__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .user-info__image {
+    width: 150px;
+    height: 150px;
+  }
+  .user-info__links .user-info__link{
+    display: inline;
+  }
 }
