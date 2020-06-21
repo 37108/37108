@@ -84,9 +84,7 @@ hr {
   font-size: .9rem;
 }
 
-.user-info__links {
-  margin-top: 1px;
-}
+.user-info__links {}
 
 .user-info__link {
   font-size: .9rem;
@@ -113,6 +111,7 @@ hr {
 }
 .portfolio__text:last-child {
   margin-bottom: 0;
+  margin-right: 0;
 }
 
 .portfolio__works {
@@ -126,7 +125,7 @@ hr {
     margin: 20px 20px;
   }
   .user-info {
-    margin-left: 1;
+    margin-right: 0;
   }
 
   .user-info__image__wrapper {
